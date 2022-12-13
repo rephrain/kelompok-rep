@@ -2,22 +2,197 @@
 <html>
     <head>
         <title></title>
-        <script type="module" src="dinamis.js"></script>
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        
+        <py-env>
+            - pandas
+            - matplotlib
+            - paths:
+                - ./dynamic.py
+                - ./csv/book1.csv
+                - ./csv/book2.csv
+                - ./csv/book3.csv
+                - ./csv/book4.csv
+                - ./csv/book5.csv
+
+        </py-env>
     </head>
     <body>
         <form>
-            <input type="radio" id="book1" name="Books" value="Book1">
-            <label for="book1">Book 1</label><br>
-            <input type="radio" id="book2" name="Books" value="Book2">
-            <label for="book2">Book 2</label><br>
-            <input type="radio" id="book3" name="Books" value="book3">
-            <label for="book3">Book 3</label><br>
-            <input type="radio" id="book4" name="Books" value="book4">
-            <label for="book4">Book 4</label><br>
-            <input type="radio" id="book5" name="Books" value="book5">
-            <label for="book5">Book 5</label><br>
-            <button type="button" id="select">Select</button>
+            <button type="button" id="select1" onclick="disp1()">Book 1</button><br>
+            <button type="button" id="select2" onclick="disp2()">Book 2</button><br>
+            <button type="button" id="select3" onclick="disp3()">Book 3</button><br>
+            <button type="button" id="select4" onclick="disp4()">Book 4</button><br>
+            <button type="button" id="select5" onclick="disp5()">Book 5</button><br>
         </form>
-        <div id="grafik"></div>
+        <div id="grafik" display="none"></div>
+        <py-script id="grafik1">
+            import pandas as pd
+            import matplotlib.pyplot as plt
+            
+            data ="book1"
+
+            if(data=="book1"):
+                df=pd.read_csv('book1.csv')
+            elif(data=="book2"):
+                df=pd.read_csv('book2.csv')
+            elif(data=="book3"):
+                df=pd.read_csv('book3.csv')
+            elif(data=="book4"):
+                df=pd.read_csv('book4.csv')
+            else:
+                df=pd.read_csv('book5.csv')
+        
+            dfDesc = pd.DataFrame(columns=['Source'],
+                                data=df["Source"].unique())
+            # print(df.shape)
+            dfDesc['Count_Column'] = dfDesc['Source'].map(df['Source'].value_counts())
+            dfA = dfDesc.sort_values('Count_Column',ascending=False).head(10)
+            name = list(dfA["Source"])
+            count = list(dfA["Count_Column"])
+
+            fig, ax = plt.subplots()
+            ax.bar(name,count)
+            fig
+
+        </py-script>
+        <py-script id="grafik2">
+            import pandas as pd
+            import matplotlib.pyplot as plt
+            
+            data ="book2"
+
+            if(data=="book1"):
+                df=pd.read_csv('book1.csv')
+            elif(data=="book2"):
+                df=pd.read_csv('book2.csv')
+            elif(data=="book3"):
+                df=pd.read_csv('book3.csv')
+            elif(data=="book4"):
+                df=pd.read_csv('book4.csv')
+            else:
+                df=pd.read_csv('book5.csv')
+        
+            dfDesc = pd.DataFrame(columns=['Source'],
+                                data=df["Source"].unique())
+            # print(df.shape)
+            dfDesc['Count_Column'] = dfDesc['Source'].map(df['Source'].value_counts())
+            dfA = dfDesc.sort_values('Count_Column',ascending=False).head(10)
+            name = list(dfA["Source"])
+            count = list(dfA["Count_Column"])
+
+            fig, ax = plt.subplots()
+            ax.bar(name,count)
+            
+        </py-script>
+        <py-script id="grafik3">
+            import pandas as pd
+            import matplotlib.pyplot as plt
+            
+            data ="book3"
+
+            if(data=="book1"):
+                df=pd.read_csv('book1.csv')
+            elif(data=="book2"):
+                df=pd.read_csv('book2.csv')
+            elif(data=="book3"):
+                df=pd.read_csv('book3.csv')
+            elif(data=="book4"):
+                df=pd.read_csv('book4.csv')
+            else:
+                df=pd.read_csv('book5.csv')
+        
+            dfDesc = pd.DataFrame(columns=['Source'],
+                                data=df["Source"].unique())
+            # print(df.shape)
+            dfDesc['Count_Column'] = dfDesc['Source'].map(df['Source'].value_counts())
+            dfA = dfDesc.sort_values('Count_Column',ascending=False).head(10)
+            name = list(dfA["Source"])
+            count = list(dfA["Count_Column"])
+
+            fig, ax = plt.subplots()
+            ax.bar(name,count)
+            fig
+
+        </py-script>
+        <py-script id="grafik4">
+            import pandas as pd
+            import matplotlib.pyplot as plt
+            
+            data ="book4"
+
+            if(data=="book1"):
+                df=pd.read_csv('book1.csv')
+            elif(data=="book2"):
+                df=pd.read_csv('book2.csv')
+            elif(data=="book3"):
+                df=pd.read_csv('book3.csv')
+            elif(data=="book4"):
+                df=pd.read_csv('book4.csv')
+            else:
+                df=pd.read_csv('book5.csv')
+        
+            dfDesc = pd.DataFrame(columns=['Source'],
+                                data=df["Source"].unique())
+            # print(df.shape)
+            dfDesc['Count_Column'] = dfDesc['Source'].map(df['Source'].value_counts())
+            dfA = dfDesc.sort_values('Count_Column',ascending=False).head(10)
+            name = list(dfA["Source"])
+            count = list(dfA["Count_Column"])
+
+            fig, ax = plt.subplots()
+            ax.bar(name,count)
+            fig
+
+        </py-script>
+        <py-script id="grafik5">
+            import pandas as pd
+            import matplotlib.pyplot as plt
+            
+            data ="book5"
+
+            if(data=="book1"):
+                df=pd.read_csv('book1.csv')
+            elif(data=="book2"):
+                df=pd.read_csv('book2.csv')
+            elif(data=="book3"):
+                df=pd.read_csv('book3.csv')
+            elif(data=="book4"):
+                df=pd.read_csv('book4.csv')
+            else:
+                df=pd.read_csv('book5.csv')
+        
+            dfDesc = pd.DataFrame(columns=['Source'],
+                                data=df["Source"].unique())
+            # print(df.shape)
+            dfDesc['Count_Column'] = dfDesc['Source'].map(df['Source'].value_counts())
+            dfA = dfDesc.sort_values('Count_Column',ascending=False).head(10)
+            name = list(dfA["Source"])
+            count = list(dfA["Count_Column"])
+
+            fig, ax = plt.subplots()
+            ax.bar(name,count)
+            fig
+
+        </py-script>
+        <script>
+            function disp1(){
+                document.getElementById("grafik1").output = "grafik";
+            }
+            function disp2(){
+                document.getElementById("grafik2").output = "grafik";
+            }
+            function disp3(){
+                document.getElementById("grafik3").output = "grafik";
+            }
+            function disp4(){
+                document.getElementById("grafik4").output = "grafik";
+            }
+            function disp5(){
+                document.getElementById("grafik5").output = "grafik";
+            }
+        </script>
+        
     </body>
 </html>
