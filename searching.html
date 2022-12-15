@@ -8,6 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <title>Searching</title>
+    <style>
+        * {
+            font-family: "arial";
+            background-color: black;
+            color: lightgray;
+        }
+        h1 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="w3-top">
@@ -20,8 +31,32 @@
           </div>
         </div>
     </div>
-    <div class="w3-content w3-padding-64" style="max-width:1564px">
-        <h1>Searching</h1> 
+    <div style="margin-top: 100px;">
+        <h1 style="padding: 40px;">Search</h3>
+    </div>
+    <div style="margin-left: 40px;">
+        
+        <form id="search" style="margin-left: 20px">
+            <div>
+                <h5>Silahkan pilih buku yang ingin dicari : </h5>
+                <input type="radio" id="radio_book1">
+                <label for="radio_book1">Book 1</label><br>
+                <input type="radio" id="radio_book1">
+                <label for="radio_book2">Book 2</label><br>
+                <input type="radio" id="radio_book1">
+                <label for="radio_book3">Book 3</label><br>
+                <input type="radio" id="radio_book1">
+                <label for="radio_book4">Book 4</label><br>
+                <input type="radio" id="radio_book1">
+                <label for="radio_book5">Book 5</label><br><br>
+            </div>
+            <div>
+                <h5>Masukkan nama karakter yang ingin dicari : </h5>
+                <input type="text" style="width: 500px; border-color: white; border-radius: 5px;">
+            </div>
+            <br>
+            <input type="submit" style="background-color: white; color: black;"</input>
+        </form>
     </div>
 </body>
 </html>
