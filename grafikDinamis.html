@@ -28,15 +28,91 @@
             tr:nth-child(even) {
               background-color: #333333;
             }
+            #atas{
+              display: grid;
+              grid-template-areas:
+              'book1 book2 book3';
+              place-items: center;
+            }
+            #bawah{
+              display: grid;
+              grid-template-areas:
+              'book4 book5';
+              place-items: center;
+            }
+            #book1{
+              grid-area: book1;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book2{
+              grid-area: book2;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book3{
+              grid-area: book3;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book4{
+              grid-area: book4;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book5{
+              grid-area: book5;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            img{
+              width: 20vw;
+              height: 27vw;
+            }
           </style>
     </head>
     <body>
+      <div class="w3-top">
+          <div class="w3-bar w3-black w3-wide w3-padding w3-card">
+            <a href="home.html" class="w3-bar-item w3-button">Game of Thrones</a>
+            <div class="w3-right w3-hide-small">
+              <a href="grafikDinamis.html" class="w3-bar-item w3-button">Directed Graph</a>
+              <a href="searching.html" class="w3-bar-item w3-button">Search</a>
+              <a href="undirectedGraph.html" class="w3-bar-item w3-button">Undirected Graph</a>
+            </div>
+          </div>
+        </div>
+      <div class="w3-content w3-padding-64" style="max-width:1564px">
         <form>
-            <a href="grafik1.html"><button type="button" >Book 1</button></a><br>
-            <a href="grafik2.html"><button type="button" >Book 2</button></a><br>
-            <a href="grafik3.html"><button type="button" >Book 3</button></a><br>
-            <a href="grafik4.html"><button type="button" >Book 4</button></a><br>
-            <a href="grafik5.html"><button type="button" >Book 5</button></a><br>
+          <div id=atas>
+            <a href="grafik1.html"><img src="images/book1Art.jpg" id="book1"></a>
+            <a href="grafik2.html"><img src="images/book2Art.jpg" id="book2"></a>
+            <a href="grafik3.html"><img src="images/book3Art.jpg" id="book3"></a>
+          </div>
+          <div id="bawah">
+            <a href="grafik4.html"><img src="images/book4Art.jpg" id="book4"></a>
+            <a href="grafik5.html"><img src="images/book5Art.jpg" id="book5"></a>
+          </div>
         </form>
        
     </body>
