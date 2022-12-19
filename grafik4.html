@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="pyscript.css" />
+        <script defer src="pyscript.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <style>
+            body{
+              background-color: black;
+              color:gainsboro;
+            }
+            #title {
+              font-size: 16px;
+            }
+            h1, h2, h3, h4, h5, h6 {
+              font-family: "Playfair Display";
+              letter-spacing: 5px;
+            }
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            tr:nth-child(even) {
+              background-color: #333333;
+            }
+            form{
+              display: grid;
+              grid-template-areas:
+              'book1 book2 book3 book4 book5'
+              'main main main main main';
+              place-items: center;
+            }
+            #book1{
+              grid-area: book1;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book2{
+              grid-area: book2;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book3{
+              grid-area: book3;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book4{
+              grid-area: book4;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            #book5{
+              grid-area: book5;
+              display: flex;
+              background-color: black; 
+              color: white; 
+              border: 2px solid white;
+              padding: 15px 32px;
+              text-align: center;
+            }
+            img{
+              grid-area: main;
+              margin: auto;
+              padding: 40px 40px;
+            }
+          </style>
+        <py-env>
+            - pandas
+            - matplotlib
+            - paths:
+                - ./dynamic.py
+                - ./csv/book1.csv
+                - ./csv/book2.csv
+                - ./csv/book3.csv
+                - ./csv/book4.csv
+                - ./csv/book5.csv
+
+        </py-env>
+    </head>
+    <body>
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-wide w3-padding w3-card">
+              <a href="home.html" class="w3-bar-item w3-button">Game of Thrones</a>
+              <div class="w3-right w3-hide-small">
+                <a href="grafikDinamis.html" class="w3-bar-item w3-button">Directed Graph</a>
+                <a href="searching.html" class="w3-bar-item w3-button">Search</a>
+                <a href="undirectedGraph.html" class="w3-bar-item w3-button">Undirected Graph</a>
+              </div>
+            </div>
+          </div>
+        <div class="w3-content w3-padding-64" style="max-width:1564px">
+          <form>
+            <a href="grafik1.html"><button type="button" id="book1" >Book 1</button></a>
+            <a href="grafik2.html"><button type="button" id="book2">Book 2</button></a>
+            <a href="grafik3.html"><button type="button" id="book3">Book 3</button></a>
+            <a href="grafik4.html"><button type="button" id="book4">Book 4</button></a>
+            <a href="grafik5.html"><button type="button" id="book5">Book 5</button></a>
+          </form>
+        <div id="grafik" display="none"></div>
+        </div>
+        <py-script id="grafik1">
+            import pandas as pd
+            import matplotlib.pyplot as plt
+            
+            data ="book4"
+
+            if(data=="book1"):
+                df=pd.read_csv('book1.csv')
+            elif(data=="book2"):
+                df=pd.read_csv('book2.csv')
+            elif(data=="book3"):
+                df=pd.read_csv('book3.csv')
+            elif(data=="book4"):
+                df=pd.read_csv('book4.csv')
+            else:
+                df=pd.read_csv('book5.csv')
+        
+            dfDesc = pd.DataFrame(columns=['Source'],
+                                data=df["Source"].unique())
+            # print(df.shape)
+            dfDesc['Count_Column'] = dfDesc['Source'].map(df['Source'].value_counts())
+            dfA = dfDesc.sort_values('Count_Column',ascending=False).head(10)
+            name = list(dfA["Source"])
+            count = list(dfA["Count_Column"])
+
+            fig, ax = plt.subplots()
+            ax.bar(name,count)
+            plt.xticks(rotation=45)
+            fig
+
+        </py-script>
+    </body>
+</html>
