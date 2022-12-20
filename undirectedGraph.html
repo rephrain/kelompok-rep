@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="undirected.js"></script>
         <style>
           body{
@@ -75,6 +76,48 @@
          .select:hover::after {
             color: #23b499;
          }
+         .bar{
+          fill: navy;
+        }
+        .highlight{
+          fill:palevioletred
+        }
+        #tooltip{
+          position: absolute;
+          width: 200px;
+          height: auto;
+          padding: 10px;
+          background-color: blanchedalmond;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+          -webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+          -moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+          box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+          pointer-events: none;
+        }
+        #tooltip.hidden{
+          display: none;
+        }
+        #tooltip p{
+          margin: 0;
+          font-family: sans-serif;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .node circle {
+          fill: #fff;
+          stroke: steelblue;
+          stroke-width: 3px;
+        }
+      
+        .node text { font: 12px sans-serif; }
+      
+        .link {
+          fill: none;
+          stroke: #ccc;
+          stroke-width: 2px;
+        }
         </style>
     </head>
     <body>
@@ -101,6 +144,11 @@
             </select>
           </div>
           <div id="table-container" class="w3-padding-32"></div>
+          <div id="tooltip" class="hidden">
+            <p><strong>Bar Value</strong></p>
+            <p><span id="value">100</span></p>
+          </div>
+          <svg width="600" height="600"></svg>
         </div>
     </body>
 </html>
