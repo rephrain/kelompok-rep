@@ -85,8 +85,10 @@
             img{
               grid-area: main;
               margin: auto;
-              padding: 40px 40px;
+              padding: 0px 40px;
             }
+
+
           </style>
         <py-env>
             - pandas
@@ -113,20 +115,20 @@
             </div>
           </div>
         <div class="w3-content w3-padding-64" style="max-width:1564px">
-          <form>
-            <a href="grafik1.html"><button type="button" id="book1" >Book 1</button></a>
-            <a href="grafik2.html"><button type="button" id="book2">Book 2</button></a>
-            <a href="grafik3.html"><button type="button" id="book3">Book 3</button></a>
-            <a href="grafik4.html"><button type="button" id="book4">Book 4</button></a>
-            <a href="grafik5.html"><button type="button" id="book5">Book 5</button></a>
-          </form>
-        <div id="grafik" display="none"></div>
+        <form>
+          <a href="grafik1.html"><button type="button" id="book1" >Book 1</button></a>
+          <a href="grafik2.html"><button type="button" id="book2">Book 2</button></a>
+          <a href="grafik3.html"><button type="button" id="book3">Book 3</button></a>
+          <a href="grafik4.html"><button type="button" id="book4">Book 4</button></a>
+          <a href="grafik5.html"><button type="button" id="book5">Book 5</button></a>
+        </form>
+        <div id="grafik"></div>
         </div>
-        <py-script id="grafik1">
+        <py-script id="grafik1" output="grafik">
             import pandas as pd
             import matplotlib.pyplot as plt
             
-            data ="book3"
+            data ="book1"
 
             if(data=="book1"):
                 df=pd.read_csv('book1.csv')
@@ -147,9 +149,22 @@
             name = list(dfA["Source"])
             count = list(dfA["Count_Column"])
 
-            fig, ax = plt.subplots()
-            ax.bar(name,count)
-            plt.xticks(rotation=45)
+            fig, ax = plt.subplots(figsize=(15,12), facecolor="black")
+            ax.bar(name,count,color='white')
+            plt.xticks(rotation=25)
+            ax.set_facecolor("black")
+            ax.spines['bottom'].set_color('white')
+            ax.spines['bottom'].set_linewidth(3)
+            ax.spines['top'].set_color('white') 
+            ax.spines['top'].set_linewidth(3)
+            ax.spines['right'].set_color('white')
+            ax.spines['right'].set_linewidth(3)
+            ax.spines['left'].set_color('white')
+            ax.spines['left'].set_lw(3)
+            ax.xaxis.label.set_color('white')
+            ax.yaxis.label.set_color('white')
+            ax.tick_params(colors='white', which='both')
+           
             fig
 
         </py-script>
