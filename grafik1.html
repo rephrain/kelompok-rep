@@ -40,11 +40,12 @@
             #book1{
               grid-area: book1;
               display: flex;
-              background-color: black; 
-              color: white; 
+              background-color: white; 
+              color: black; 
               border: 2px solid white;
               padding: 15px 32px;
               text-align: center;
+              transition: 0.3s;
             }
             #book2{
               grid-area: book2;
@@ -54,6 +55,7 @@
               border: 2px solid white;
               padding: 15px 32px;
               text-align: center;
+              transition: 0.3s;
             }
             #book3{
               grid-area: book3;
@@ -63,6 +65,7 @@
               border: 2px solid white;
               padding: 15px 32px;
               text-align: center;
+              transition: 0.3s;
             }
             #book4{
               grid-area: book4;
@@ -72,6 +75,7 @@
               border: 2px solid white;
               padding: 15px 32px;
               text-align: center;
+              transition: 0.3s;
             }
             #book5{
               grid-area: book5;
@@ -81,11 +85,28 @@
               border: 2px solid white;
               padding: 15px 32px;
               text-align: center;
+              transition: 0.3s;
             }
             img{
               grid-area: main;
               margin: auto;
               padding: 0px 40px;
+            }
+            #book2:hover {
+              background-color: white;
+              color: black;
+            }
+            #book3:hover {
+              background-color: white;
+              color: black;
+            }
+            #book4:hover {
+              background-color: white;
+              color: black;
+            }
+            #book5:hover {
+              background-color: white;
+              color: black;
             }
 
 
@@ -116,7 +137,7 @@
           </div>
         <div class="w3-content w3-padding-64" style="max-width:1564px">
         <form>
-          <a href="grafik1.html"><button type="button" id="book1" >Book 1</button></a>
+          <a href="grafik1.html"><button type="button" id="book1">Book 1</button></a>
           <a href="grafik2.html"><button type="button" id="book2">Book 2</button></a>
           <a href="grafik3.html"><button type="button" id="book3">Book 3</button></a>
           <a href="grafik4.html"><button type="button" id="book4">Book 4</button></a>
