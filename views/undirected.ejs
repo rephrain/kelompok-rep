@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Undirected Graph</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="undirected.js"></script>
+        <style>
+          body{
+            background-color: black;
+            color:gainsboro;
+          }
+          #title {
+            font-size: 16px;
+          }
+          h1, h2, h3, h4, h5, h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+          }
+          table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+          td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+          }
+          tr:nth-child(even) {
+            background-color: #333333;
+          }
+          select {
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            -ms-appearance:none;
+            appearance:none;
+            outline:0;
+            box-shadow:none;
+            border:0!important;
+            background: #5c6664;
+            background-image: none;
+            flex: 1;
+            padding: 0 .5em;
+            color:#fff;
+            cursor:pointer;
+            font-size: 1em;
+            font-family: 'Open Sans', sans-serif;
+         }
+         select::-ms-expand {
+            display: none;
+         }
+         .select {
+            position: relative;
+            display: flex;
+            width:85em;
+            height: 3em;
+            line-height: 3;
+            background: #5c6664;
+            overflow: hidden;
+            border-radius: .25em;
+         }
+         .select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+            background: #2b2e2e;
+            cursor:pointer;
+            pointer-events:none;
+            transition:.25s all ease;
+         }
+         .select:hover::after {
+            color: #23b499;
+         }
+         .bar{
+          fill: navy;
+        }
+        .highlight{
+          fill:palevioletred
+        }
+        #tooltip{
+          position: absolute;
+          width: 200px;
+          height: auto;
+          padding: 10px;
+          background-color: blanchedalmond;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px;
+          -webkit-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+          -moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+          box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+          pointer-events: none;
+        }
+        #tooltip.hidden{
+          display: none;
+        }
+        #tooltip p{
+          margin: 0;
+          font-family: sans-serif;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .node circle {
+          fill: #fff;
+          stroke: steelblue;
+          stroke-width: 3px;
+        }
+      
+        .node text { font: 12px sans-serif; }
+      
+        .link {
+          fill: none;
+          stroke: #ccc;
+          stroke-width: 2px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-wide w3-padding w3-card">
+              <a href="home.html" class="w3-bar-item w3-button">Game of Thrones</a>
+              <div class="w3-right w3-hide-small">
+                <a href="grafikDinamis.html" class="w3-bar-item w3-button">Directed Graph</a>
+                <a href="searching.html" class="w3-bar-item w3-button">Search</a>
+                <a href="undirectedGraph.html" class="w3-bar-item w3-button">Undirected Graph</a>
+              </div>
+            </div>
+          </div>
+        <div class="w3-content w3-padding-32" style="max-width:1564px">
+          <h2 class="w3-center w3-padding-32">Undirected Graph</h2>
+          <div class="select">
+            <select name="format" id="format" onchange="onChange()">
+                <option selected disabled>Choose a book</option>
+                <option value="book1">Book 1</option>
+                <option value="book2">Book 2</option>
+                <option value="book3">Book 3</option>
+                <option value="book4">Book 4</option>
+                <option value="book5">Book 5</option>
+            </select>
+          </div>
+          <div id="table-container" class="w3-padding-32"></div>
+          <div id="tooltip" class="hidden">
+            <p><strong>Bar Value</strong></p>
+            <p><span id="value">100</span></p>
+          </div>
+          <svg width="600" height="600"></svg>
+        </div>
+    </body>
+</html>
