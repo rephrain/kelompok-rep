@@ -1,0 +1,86 @@
+{
+    "nodes": [
+      {
+        "id": 1,
+        "name": "Eddard-Stark"
+      },
+      {
+        "id": 2,
+        "name": "Bran-Stark"
+      },
+      {
+        "id": 3,
+        "name": "Daenerys-Targaryen"
+      },
+      {
+        "id": 4,
+        "name": "Robert-Baratheon"
+      },
+      {
+        "id": 5,
+        "name": "Robb-Stark"
+      },
+      {
+        "id": 6,
+        "name": "Drogo"
+      },
+      {
+        "id": 7,
+        "name": "Joffrey-Baratheon"
+      },
+      {
+        "id": 8,
+        "name": "Sansa-Stark"
+      },
+      {
+        "id": 9,
+        "name": "Petyr-Baelish"
+      },
+      {
+        "id": 10,
+        "name": "Jorah-Mormont"
+      }
+    ],
+    "links": [ 
+      {
+        "source": 1,
+        "target": 4
+      },
+      {
+        "source": 2,
+        "target": 5
+      },
+      {
+        "source": 3,
+        "target": 6
+      }, 
+      {
+        "source": 7,
+        "target": 8
+      },
+      {
+        "source": 1,
+        "target": 9
+      },
+      {
+        "source": 3,
+        "target": 10
+      },
+      {
+        "source": 6,
+        "target": 4
+      },
+      {
+        "source": 2,
+        "target": 4
+      },
+      {
+        "source": 2,
+        "target": 8
+      },
+      {
+        "source": 1,
+        "target": 7
+      }
+    ]
+  }

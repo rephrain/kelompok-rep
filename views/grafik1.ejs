@@ -2,8 +2,8 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="pyscript.css" />
-        <script defer src="pyscript.js"></script>
+        <link rel="stylesheet" href="public\pyscript.css" />
+        <script defer src="public\script\pyscript.js"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
         <style>
             body{
@@ -106,29 +106,29 @@
     <body>
         <div class="w3-top">
             <div class="w3-bar w3-black w3-wide w3-padding w3-card">
-              <a href="home.html" class="w3-bar-item w3-button">Game of Thrones</a>
+              <a href="/home" class="w3-bar-item w3-button">Game of Thrones</a>
               <div class="w3-right w3-hide-small">
-                <a href="grafikDinamis.html" class="w3-bar-item w3-button">Directed Graph</a>
-                <a href="searching.html" class="w3-bar-item w3-button">Search</a>
-                <a href="undirectedGraph.html" class="w3-bar-item w3-button">Undirected Graph</a>
+                <a href="/dinamis" class="w3-bar-item w3-button">Directed Graph</a>
+                <a href="/search" class="w3-bar-item w3-button">Search</a>
+                <a href="/undirected" class="w3-bar-item w3-button">Undirected Graph</a>
               </div>
             </div>
           </div>
         <div class="w3-content w3-padding-64" style="max-width:1564px">
-          <form>
-            <a href="/grafik1"><button type="button" id="book1" >Book 1</button></a>
-            <a href="/grafik2"><button type="button" id="book2">Book 2</button></a>
-            <a href="/grafik3"><button type="button" id="book3">Book 3</button></a>
-            <a href="/grafik4"><button type="button" id="book4">Book 4</button></a>
-            <a href="/grafik5"><button type="button" id="book5">Book 5</button></a>
-          </form>
+        <form>
+          <a href="grafik1.html"><button type="button" id="book1" >Book 1</button></a>
+          <a href="grafik2.html"><button type="button" id="book2">Book 2</button></a>
+          <a href="grafik3.html"><button type="button" id="book3">Book 3</button></a>
+          <a href="grafik4.html"><button type="button" id="book4">Book 4</button></a>
+          <a href="grafik5.html"><button type="button" id="book5">Book 5</button></a>
+        </form>
         <div id="grafik"></div>
         </div>
         <py-script id="grafik1" output="grafik">
             import pandas as pd
             import matplotlib.pyplot as plt
             
-            data ="book5"
+            data ="book1"
 
             if(data=="book1"):
                 df=pd.read_csv('book1.csv')

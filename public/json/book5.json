@@ -1,0 +1,90 @@
+{
+    "nodes": [
+      {
+        "id": 1,
+        "name": "Daenerys-Targaryen"
+      },
+      {
+        "id": 2,
+        "name": "Hizdahr-zo-Loraq"
+      },
+      {
+        "id": 3,
+        "name": "Ramsay-Snow"
+      },
+      {
+        "id": 4,
+        "name": "Theon-Greyjoy"
+      },
+      {
+        "id": 5,
+        "name": "Barristan-Selmy"
+      },
+      {
+        "id": 6,
+        "name": "Jon-Snow"
+      },
+      {
+        "id": 7,
+        "name": "Stannis-Baratheon"
+      },
+      {
+        "id": 8,
+        "name": "Tyrion-Lannister"
+      },
+      {
+        "id": 9,
+        "name": "Penny"
+      },
+      {
+        "id": 10,
+        "name": "Quentyn-Martell"
+      }
+    ],
+    "links": [ 
+      {
+        "source": 1,
+        "target": 2
+      },
+      {
+        "source": 3,
+        "target": 4
+      },
+      {
+        "source": 5,
+        "target": 1
+      }, 
+      {
+        "source": 6,
+        "target": 7
+      },
+      {
+        "source": 9,
+        "target": 8
+      },
+      {
+        "source": 1,
+        "target": 10
+      },
+      {
+        "source": 7,
+        "target": 4
+      },
+      {
+        "source": 2,
+        "target": 10
+      },
+      {
+        "source": 1,
+        "target": 9
+      },
+      {
+        "source": 5,
+        "target": 2
+      },
+      {
+        "source": 1,
+        "target": 6
+      }
+    ]
+  }

@@ -1,0 +1,90 @@
+{
+    "nodes": [
+      {
+        "id": 1,
+        "name": "Tommen-Baratheon"
+      },
+      {
+        "id": 2,
+        "name": "Margaery-Tyrell"
+      },
+      {
+        "id": 3,
+        "name": "Jaime-Lannister"
+      },
+      {
+        "id": 4,
+        "name": "Taena-of-Myr"
+      },
+      {
+        "id": 5,
+        "name": "Jon-Snow"
+      },
+      {
+        "id": 6,
+        "name": "Samwell-Tarly"
+      },
+      {
+        "id": 7,
+        "name": "Gilly"
+      },
+      {
+        "id": 8,
+        "name": "Tyrion-Lannister"
+      },
+      {
+        "id": 9,
+        "name": "Ilyn-Payne"
+      },
+      {
+        "id": 10,
+        "name": "Cersei-Lannister"
+      }
+    ],
+    "links": [ 
+      {
+        "source": 10,
+        "target": 1
+      },
+      {
+        "source": 10,
+        "target": 2
+      },
+      {
+        "source": 10,
+        "target": 3
+      }, 
+      {
+        "source": 10,
+        "target": 4
+      },
+      {
+        "source": 5,
+        "target": 6
+      },
+      {
+        "source": 7,
+        "target": 6
+      },
+      {
+        "source": 10,
+        "target": 8
+      },
+      {
+        "source": 9,
+        "target": 3
+      },
+      {
+        "source": 3,
+        "target": 4
+      },
+      {
+        "source": 4,
+        "target": 8
+      },
+      {
+        "source": 10,
+        "target": 5
+      }
+    ]
+  }

@@ -1,0 +1,110 @@
+{
+    "nodes": [
+      {
+        "id": 1,
+        "name": "Tyrion-Lannister"
+      },
+      {
+        "id": 2,
+        "name": "Cersei-Lannister"
+      },
+      {
+        "id": 3,
+        "name": "Renly-Baratheon"
+      },
+      {
+        "id": 4,
+        "name": "Stannis-Baratheon"
+      },
+      {
+        "id": 5,
+        "name": "Jeor-Mormont"
+      },
+      {
+        "id": 6,
+        "name": "Jon-Snow"
+      },
+      {
+        "id": 7,
+        "name": "Joffrey-Baratheon"
+      },
+      {
+        "id": 8,
+        "name": "Sansa-Stark"
+      },
+      {
+        "id": 9,
+        "name": "Varys"
+      },
+      {
+        "id": 10,
+        "name": "Davos-Seaworth"
+      },
+      {
+        "id": 11,
+        "name": "Robb-Stark"
+      }
+    ],
+    "links": [ 
+      {
+        "source": 7,
+        "target": 1
+      },
+      {
+        "source": 2,
+        "target": 1
+      },
+      {
+        "source": 7,
+        "target": 8
+      }, 
+      {
+        "source": 3,
+        "target": 4
+      },
+      {
+        "source": 2,
+        "target": 7
+      },
+      {
+        "source": 5,
+        "target": 6
+      },
+      {
+        "source": 1,
+        "target": 9
+      },
+      {
+        "source": 10,
+        "target": 4
+      },
+      {
+        "source": 8,
+        "target": 1
+      },
+      {
+        "source": 2,
+        "target": 4
+      },
+      {
+        "source": 11,
+        "target": 8
+      },
+      {
+        "source": 6,
+        "target": 11
+      },
+      {
+        "source": 2,
+        "target": 9
+      },
+      {
+        "source": 7,
+        "target": 9
+      },
+      {
+        "source": 4,
+        "target": 1
+      }
+    ]
+  }
