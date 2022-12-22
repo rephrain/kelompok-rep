@@ -18,11 +18,11 @@ const pool = mysql.createPool({
 })
 
 app.get('/', (req, res) => {
-    res.render('home')
+    res.sendFile('home.html', {root:'.'})
 })
 
 app.get('/home', (req, res) => {
-    res.render('home')
+    res.sendFile('home.html', {root:'.'})
 })
 
 app.get('/search', (req, res) => {
