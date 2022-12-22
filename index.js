@@ -37,7 +37,7 @@ app.get('/search', (req, res) => {
         result : result
     })
     else {
-        const result = pool.query(`SELECT target, weight FROM search_data WHERE source=? AND book=?`, [nama_karakter, book], (err, rows, fields) =>{
+        const result = pool.query("SELECT target, weight FROM (SELECT * FROM search_data WHERE book =" + book + ") a WHERE source LIKE '%" + nama_karakter + "%'", (err, rows, fields) =>{
             res.render('./search', {
                 result : rows
             })
